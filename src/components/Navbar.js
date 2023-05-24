@@ -12,8 +12,8 @@ export default function Navbar() {
   console.log("state", state);
 
   return (
-    <nav>
-      <div className="nav-wrapper">
+    <nav className="navbar">
+      <div>
         <Link to={state ? "/" : "/signin"} className="brand-logo left">
           Instagram
         </Link>
@@ -27,10 +27,13 @@ export default function Navbar() {
               <li>
                 <Link to="/CreatePost">Create Post</Link>
               </li>
-
+              <li key="4">
+                <Link to="/subpost">My following Posts</Link>
+              </li>
+              ,
               <li key="5">
                 <button
-                  className="btn #c62828 red darken-3"
+                  className="btn-small bno #c62828  btn waves-effect waves-light red darken-3"
                   onClick={() => {
                     localStorage.clear();
                     dispatch({ type: "CLEAR" });
@@ -55,4 +58,9 @@ export default function Navbar() {
       </div>
     </nav>
   );
+
+
+
+
+
 }

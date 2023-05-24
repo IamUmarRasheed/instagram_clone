@@ -6,10 +6,14 @@ a{
 
 .brand-logo,h2{
   font-family: 'Grand Hotel', cursive;
+  font-weight: bold;
+  font-size: x-large;
+ 
 }
 
 .mycard{
   margin-top: 30px;
+
 }
 .auth-card{
   padding: 20px;
@@ -30,7 +34,8 @@ a{
 .gallery{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  gap: 20px;
 }
 
 .item{
@@ -41,6 +46,7 @@ a{
   max-width: 500px;
   height: max-content;
   margin: 26px auto;
+  /* padding-top: 20px; */
   
 }
 .collection-item{
@@ -57,4 +63,31 @@ a{
 
 .material-icons:hover{
   cursor: pointer;
+}
+
+
+
+.navbar{
+  background-color: brown !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.bno{
+  display: inline-block;
+}
+
+
+
+.h5{
+  
+  margin: 0px;
+  padding: 20px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.body{
+  background-color:slategrey;
+  height: 100%;
 }

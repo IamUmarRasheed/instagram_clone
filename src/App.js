@@ -9,7 +9,10 @@ import { reducer,initialState } from "./reducers/useReducer";
 import './App.css'
 import CreatePost from "./components/screens/CreatePost";
 import { useNavigate } from "react-router-dom";
+import UserProfile from "./components/screens/UserProfile";
+import Subscribes from "./components/screens/SubscribesUserPosts";
 export const UserContext = createContext();
+
 
 const Routing = () => {
   const { state, dispatch } = useContext(UserContext);
@@ -37,8 +40,10 @@ console.log("hello state from app",state)
       <Route path="/" element={<Home />} />
       <Route path="/Signin" element={<SignIn />} />
       <Route path="/Signup" element={<Signup />} />
-      <Route path="/Profile" element={<Profile />} />
+      <Route exact path="/Profile" element={<Profile />} />
+      <Route path="/Profile/:userid" element={<UserProfile />} />
       <Route path="/CreatePost" element={<CreatePost />} />
+      <Route path="/subpost" element={<Subscribes/>} />
     </Routes>
   );
 };
@@ -47,14 +52,17 @@ console.log("hello state from app",state)
 function App() {
    const [state,dispatch] = useReducer(reducer,initialState)
   return (
-    
-     <UserContext.Provider value={{state,dispatch}}>
+    <UserContext.Provider value={{ state, dispatch }}>
       <BrowserRouter>
-        <Navbar />
-       <Routing/>
+        <div
+          className="body"
+       
+        >
+          <Navbar />
+          <Routing />
+        </div>
       </BrowserRouter>
-       </UserContext.Provider>
-  
+    </UserContext.Provider>
   );
 }
 

@@ -14,7 +14,7 @@ export default function Home() {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         setData(result.posts);
       });
   }, []);
@@ -128,7 +128,7 @@ export default function Home() {
 
           return (
             <div className="card home-card" key={item._id}>
-              <h5 style={{ padding: "5px" }}>
+              <h5 className="h5" style={{ padding: "20px" }}>
                 <Link
                   to={
                     postedById !== state._id
