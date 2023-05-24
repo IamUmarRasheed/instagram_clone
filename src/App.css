@@ -3,11 +3,23 @@
 a{
   color: black !important;
 }
+.myspan{
+  font-family: 'Grand Hotel', cursive;
+  font-weight: bold;
+  font-size: xx-large;
+  margin-left: 70px;
+   color: black !important;
+
+}
+.myspan:hover{
+  color:  #0083AF !important;
+}
 
 .brand-logo,h2{
   font-family: 'Grand Hotel', cursive;
   font-weight: bold;
   font-size: x-large;
+ /* padding-bottom: 10px; */
  
 }
 
@@ -76,9 +88,12 @@ a{
 
 .bno{
   display: inline-block;
+  background-color:  green!important;
 }
 
-
+.bno:hover{
+  background-color: #c62828 !important;
+}
 
 .h5{
   

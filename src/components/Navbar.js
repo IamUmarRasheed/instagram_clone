@@ -3,6 +3,9 @@ import { Link, Navigate } from "react-router-dom";
 import "../App.css";
 import { UserContext } from "../App";
 import { useNavigate } from "react-router-dom";
+import logoimg from '../assets/instagram.png'
+
+
 
 
 export default function Navbar() {
@@ -15,8 +18,9 @@ export default function Navbar() {
     <nav className="navbar">
       <div>
         <Link to={state ? "/" : "/signin"} className="brand-logo left">
-          Instagram
+          <img src={logoimg} alt="Instalogo" />
         </Link>
+        <span  className="myspan" >MomenTO</span>
 
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           {state ? (
@@ -30,10 +34,10 @@ export default function Navbar() {
               <li key="4">
                 <Link to="/subpost">My following Posts</Link>
               </li>
-              ,
+
               <li key="5">
                 <button
-                  className="btn-small bno #c62828  btn waves-effect waves-light red darken-3"
+                  className="btn-small bno  btn waves-effect waves-light  darken-3"
                   onClick={() => {
                     localStorage.clear();
                     dispatch({ type: "CLEAR" });
