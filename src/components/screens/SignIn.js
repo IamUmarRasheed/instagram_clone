@@ -4,6 +4,7 @@ import M from "materialize-css";
 import { useState } from "react";
 import { UserContext } from "../../App";
 import { useContext } from "react";
+import MyImage from './images.jpeg'
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ export default function SignIn() {
       },
       body: JSON.stringify({
         password: password,
-        email: email,
+        email: email
       }),
     })
       .then((res) => res.json())
@@ -53,7 +54,10 @@ export default function SignIn() {
   return (
     <div className="mycard">
       <div className="card auth-card input-field">
-        <h2>Instagram</h2>
+    <div>
+      <img src={MyImage} alt="Description of the image" />
+    </div>
+    <h3 className="LOGIN">Login</h3>
         <input
           type="text"
           placeholder="email"

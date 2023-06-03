@@ -75,20 +75,21 @@ const Profile = () => {
   const followingCount = state && state.following ? state.following.length : 0;
 
   return (
-    <div style={{ maxWidth: "550px", margin: "0px auto" }}>
+    <div className="prp1" style={{ maxWidth: "550px", margin: "0px auto" }}>
       <div
         style={{
           margin: "18px 0px",
-          borderBottom: "1px solid grey",
+       
         }}
       >
-        <div
+        <div className="prp"
           style={{
             display: "flex",
             justifyContent: "space-around",
           }}
         >
           <div>
+            {console.log(state.pic)}
             <img
               style={{ width: "160px", height: "160px", borderRadius: "80px" }}
               src={state ? state.pic : "loading"}

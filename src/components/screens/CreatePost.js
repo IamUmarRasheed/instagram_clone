@@ -80,6 +80,7 @@ export default function CreatePost() {
         textAlign: "center",
       }}
     >
+      <h3 className="LOGIN">Create A Post Now</h3>
       <input
         type="text"
         placeholder="title"

@@ -3,7 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import "../App.css";
 import { UserContext } from "../App";
 import { useNavigate } from "react-router-dom";
-import logoimg from '../assets/instagram.png'
+import logoimg from '../assets/images.png'
 
 
 

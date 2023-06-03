@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import M from "materialize-css";
+import MyImage2 from './images - Copy.jpeg'
 const cloudinaryApiKey = process.env.REACT_APP_CLOUDINARY_API_KEY;
 
 export default function Signup() {
@@ -100,7 +101,10 @@ export default function Signup() {
   return (
     <div className="mycard">
       <div className="card auth-card input-field">
-        <h2>Instagram</h2>
+      <div>
+      <img src={MyImage2} alt="Description of the image" />
+    </div>
+      <h3 className="LOGIN">Signup</h3>
         <input
           type="text"
           placeholder="name"
